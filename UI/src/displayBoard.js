@@ -17,7 +17,7 @@ export default function Board({ board, onSquareClick }) {
       gridTemplateColumns: 'repeat(8, 50px)', 
       width: '400px', 
       border: '2px solid black' 
-    }}>
+    }}>x``
       {board.map((row, r) =>
         row.map((piece, c) => {
           const isLightSquare = (r + c) % 2 === 1;

@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { initialBoard } from './AI/board.js';
-import Board from './displayBoard.js';
+import Board from './Board';
 
 export default function App() {
   const [board, setBoard] = useState(initialBoard);
 
   const handleSquareClick = (row, col) => {
-    console.log('Clicked square:', row, col);
-    // Here you will handle piece selection and moves later
+    console.log('Clicked', row, col, board[row][col]);
+    // You’ll add move logic here
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Chess App</h1>
+    <div className="flex justify-center mt-10">
       <Board board={board} onSquareClick={handleSquareClick} />
     </div>
   );
